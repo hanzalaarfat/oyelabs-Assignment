@@ -1,0 +1,38 @@
+// CREATE TABLE customers (
+//   cust_id INTEGER PRIMARY KEY,
+//   name TEXT NOT NULL,
+//   email TEXT NOT NULL
+// );
+
+// -- insert some values
+// INSERT INTO customers VALUES (1, 'ravi', 'ravi123@gmail.com');
+// INSERT INTO customers VALUES (2, 'kishan', 'kishan11@gmail.com');
+// INSERT INTO customers VALUES (3, 'sameer', 'sameer44@gmail.com');
+
+// CREATE TABLE subjects (
+//   sub_id INTEGER PRIMARY KEY,
+//   subjectName TEXT NOT NULL
+// );
+
+// INSERT INTO subjects VALUES (1, 'English');
+// INSERT INTO subjects VALUES (2, 'Hindi');
+// INSERT INTO subjects VALUES (3, 'Maths');
+
+// CREATE TABLE Subject_student_mapping(
+//   mappingId INTEGER PRIMARY KEY,
+//   customerId INTEGER,
+//   subjectId INTEGER
+// );
+// INSERT INTO Subject_student_mapping VALUES (1, 1, 1);
+// INSERT INTO Subject_student_mapping VALUES (2, 1, 2);
+// INSERT INTO Subject_student_mapping VALUES (3, 1, 3);
+// INSERT INTO Subject_student_mapping VALUES (4, 2, 1);
+// INSERT INTO Subject_student_mapping VALUES (5, 3, 3);
+// INSERT INTO Subject_student_mapping VALUES (6, 3, 1);
+
+// SELECT M.customerId,C.name,S.subjectName
+// FROM customers as C JOIN Subject_student_mapping as M
+// ON C.cust_id = M.customerId
+// JOIN subjects as S
+// ON M.subjectId = S.sub_id
+// ORDER BY M.customerId ASC, S.subjectName ASC;
