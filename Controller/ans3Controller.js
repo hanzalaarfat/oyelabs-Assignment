@@ -45,6 +45,7 @@ exports.ExistEmailThenUpdateName = async (req, res) => {
           { email: email },
           {
             $set: {
+              ///  name will be only update
               name: name,
             },
           },
